@@ -18,13 +18,13 @@ const Row = ({ title, movies }: Props) => {
     setIsMoved(true)
 
     if (rowRef.current) {
-      const {scrollLeft, clientWidth } = rowRef.current
+      const {scrollLeft, clientWidth } = rowRef.current;
 
       const scrollTo = direction === "left" 
       ? scrollLeft - clientWidth 
       : scrollLeft + clientWidth
 
-      rowRef.current.scrollTo({left: scrollTo, behaviour: 'smooth'})
+      rowRef.current.scrollTo({left: scrollTo, behavior: 'smooth'})
     }
   }
 
